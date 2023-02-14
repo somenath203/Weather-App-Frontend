@@ -11,7 +11,7 @@ const WeatherApp = () => {
 
   const [weatherTemperature, setWeatherTemperature] = useState();
   const [humidity, setHumidity] = useState();
-  const [ country, setCountry ] = useState();
+  const [country, setCountry] = useState();
 
 
   const onSubmitForm = async (e) => {
@@ -21,7 +21,11 @@ const WeatherApp = () => {
 
     const lettersOnlyRegex = /^[a-zA-Z]+$/;
 
-    if (!weatherCityInput.match(lettersOnlyRegex)) {
+    if (!weatherCityInput) {
+
+      Notify.failure('Please enter something in input field', { position: 'center-center', timeout: 4000 });
+
+    } else if (!weatherCityInput.match(lettersOnlyRegex)) {
 
       Notify.failure('Input can\'t be numbers.', { position: 'center-center', timeout: 6000 });
 
