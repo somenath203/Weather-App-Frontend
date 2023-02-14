@@ -37,7 +37,7 @@ const WeatherApp = () => {
       
       setShowOutputDiv(false);
 
-      Notify.failure('Input can\'t be numbers.', { position: 'center-center', timeout: 6000 });
+      Notify.failure('Only letters are accepted as input.', { position: 'center-center', timeout: 6000 });
 
     } else {
 
