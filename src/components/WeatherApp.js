@@ -19,7 +19,7 @@ const WeatherApp = () => {
     e.preventDefault();
 
 
-    const lettersOnlyRegex = /^[a-zA-Z]+$/;
+    const lettersOnlyRegex = /^[a-zA-Z\s]+$/;
 
     if (!weatherCityInput) {
 
