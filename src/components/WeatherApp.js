@@ -24,9 +24,18 @@ const WeatherApp = () => {
 
     if (!weatherCityInput) {
 
+      setLoading(false);
+      
+      setShowOutputDiv(false);
+
       Notify.failure('Please enter something in input field', { position: 'center-center', timeout: 4000 });
 
+
     } else if (!weatherCityInput.match(lettersOnlyRegex)) {
+
+      setLoading(false);
+      
+      setShowOutputDiv(false);
 
       Notify.failure('Input can\'t be numbers.', { position: 'center-center', timeout: 6000 });
 
