@@ -89,7 +89,7 @@ const WeatherApp = () => {
           onChange={(e) => setWeatherCityInput(e.target.value)}
         />
         {loading ? <button
-          className="mt-8 w-full tracking-wider uppercase text-lg bg-pink-200 p-2 rounded-lg text-white outline-none border-none shadow-lg font-bold transition-all duration-500 hover:cursor-not-allowed"
+          className="mt-8 w-full tracking-wider uppercase text-lg bg-pink-200 p-2 rounded-lg text-white outline-none border-none shadow-lg font-bold hover:cursor-not-allowed"
           disabled={true}
         >Get Weather</button> : <button
           className="mt-8 w-full tracking-wider uppercase text-lg bg-pink-400 p-2 rounded-lg text-white outline-none border-none shadow-lg font-bold transition-all duration-500 hover:bg-pink-500"
